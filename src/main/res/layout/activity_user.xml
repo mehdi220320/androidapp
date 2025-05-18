@@ -64,18 +64,17 @@
                 android:id="@+id/part2_input"
                 android:layout_width="100dp"
                 android:layout_height="48dp"
-                android:layout_centerVertical="true"
-                android:layout_marginStart="16dp"
+                android:layout_marginStart="169dp"
                 android:layout_toEndOf="@id/part1_input"
+                android:background="@android:color/transparent"
+                android:hint="XXXX"
+                android:importantForAccessibility="no"
                 android:inputType="number"
                 android:maxLength="4"
-                android:background="@android:color/transparent"
-                android:textColor="@android:color/black"
-                android:textSize="20sp"
-                android:textStyle="bold"
                 android:minHeight="48dp"
-                android:importantForAccessibility="no"
-                android:hint="XXXX"/>
+                android:textColor="@android:color/white"
+                android:textSize="20sp"
+                android:textStyle="bold" />
         </RelativeLayout>
 
         <!-- Location Input -->
