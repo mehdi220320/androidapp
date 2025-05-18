@@ -1,0 +1,12 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.Mobileproj" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Status bar color -->
+        <item name="android:statusBarColor">#2196F3</item>
+
+        <!-- Make status bar icons dark/light -->
+        <item name="android:windowLightStatusBar" >true</item>
+    </style>
+
+    <style name="Theme.Mobileproj" parent="Base.Theme.Mobileproj" />
+</resources>

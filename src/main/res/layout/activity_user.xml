@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    android:fillViewport="true">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Photo Preview -->
+        <ImageView
+            android:id="@+id/image_view"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:background="#f0f0f0"
+            android:scaleType="centerCrop"
+            android:contentDescription="Preview of captured violation photo"
+            android:importantForAccessibility="yes"/>
+
+        <!-- Capture Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/capture_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="16dp"
+            android:text="Take Photo"
+            app:backgroundTint="#2196F3"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_camera"
+            app:iconTint="@android:color/white"
+            app:iconGravity="textStart"
+            app:iconPadding="8dp"/>
+
+        <!-- Serial Number Input -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/matricule"
+            android:layout_marginTop="16dp">
+
+            <!-- First Part (3 digits) -->
+            <EditText
+                android:id="@+id/part1_input"
+                android:layout_width="80dp"
+                android:layout_height="48dp"
+                android:layout_marginStart="20dp"
+                android:layout_centerVertical="true"
+                android:inputType="number"
+                android:maxLength="3"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:minHeight="48dp"
+                android:importantForAccessibility="no"
+                android:hint="XXX"/>
+
+            <!-- Second Part (4 digits) -->
+            <EditText
+                android:id="@+id/part2_input"
+                android:layout_width="100dp"
+                android:layout_height="48dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="16dp"
+                android:layout_toEndOf="@id/part1_input"
+                android:inputType="number"
+                android:maxLength="4"
+                android:background="@android:color/transparent"
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:minHeight="48dp"
+                android:importantForAccessibility="no"
+                android:hint="XXXX"/>
+        </RelativeLayout>
+
+        <!-- Location Input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/location_container"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+            app:boxStrokeColor="#2196F3"
+            app:hintTextColor="#2196F3">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/location_input"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Location"
+                android:inputType="textCapWords"
+                android:textColor="@android:color/black"
+                android:textColorHint="#2196F3"/>
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Submit Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/submit_button"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="24dp"
+            android:text="Save Infraction"
+            app:backgroundTint="#2196F3"
+            app:cornerRadius="8dp"
+            app:icon="@drawable/ic_save"
+            app:iconTint="@android:color/white"
+            app:iconGravity="textStart"/>
+    </LinearLayout>
+</ScrollView>
